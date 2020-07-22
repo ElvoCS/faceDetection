@@ -28,7 +28,11 @@ while True:
         cv2.rectangle(frame, (x, y), (x+w, y+h), (0, 255, 0), 2)
 
     cv2.imshow('Elvos Face Detector', frame)
-    cv2.waitKey(1)
+    key = cv2.waitKey(1)
+
+    # press q to quit
+    if key == 81 or key == 113:
+        break
 
 
 """
